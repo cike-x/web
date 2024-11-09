@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>员工信息表</title>
+    <style>
+      /* 类别选择器 */
+      .tech-dept {
+        background-color: #e0f7e9;
+        margin-bottom: 20px;
+      }
+
+      .marketing-dept {
+        background-color: #e3f2fd;
+        margin-bottom: 20px;
+      }
+
+      .hr-dept {
+        background-color: #ffe0b2;
+        margin-bottom: 20px;
+      }
+
+      /* 限制和不限制的 ID 选择器 */
+      #special-employee {
+        border: 2px solid #8e24aa;
+        background-color: #f5f5f5;
+        padding: 10px;
+      }
+
+      /* 后代选择器 */
+      .tech-dept .employee-card {
+        color: #424242;
+        padding: 10px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .marketing-dept .employee-card {
+        color: #424242;
+        padding: 10px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      /* 并集选择器 */
+      .marketing-dept,
+      .tech-dept {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      /* 伪类选择器 */
+      .employee-card:hover {
+        background-color: #ffdfc4;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .employee-card:nth-child(odd) {
+        background-color: #f5f5f5;
+      }
+
+      /* 伪类和类别选择器组合 */
+      .high-rating:hover {
+        color: #ffd700;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tech-dept">
+      <h2>技术部三个人</h2>
+      <p class="employee-card high-rating">张三 - 技术经理 - 评分：4.6</p>
+      <p class="employee-card high-rating">李四 - 软件工程师 - 评分：4.8</p>
+      <p class="employee-card" id="special-employee">
+        王五 - 技术顾问 - 评分：4.3
+      </p>
+    </div>
+
+    <div class="marketing-dept">
+      <h2>市场部两个人</h2>
+      <div class="employee-card">赵六 - 市场总监 - 评分：4.4</div>
+      <div class="employee-card high-rating">钱七 - 市场专员 - 评分：4.7</div>
+    </div>
+
+    <div class="hr-dept">
+      <h2>人事部两个人</h2>
+      <div class="employee-card">周八 - 招聘专员 - 评分：4.5</div>
+      <div class="employee-card high-rating">吴九 - 人事经理 - 评分：4.6</div>
+    </div>
+  </body>
+</html>
