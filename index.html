@@ -2,23 +2,31 @@
 <html>
   <head>
     <title>沈行-0114-计工本2303-Edge</title>
+	 <script src="script.js" defer></script> <!-- 引入原有的 JavaScript 文件 -->
+	  <script src="clock.js" defer></script> <!-- 引入时钟功能的 JavaScript 文件 -->
+	  <script src="screenInfo.js" defer></script> <!-- 引入屏幕信息的 JavaScript 文件 -->
+	  <script src="mouseEvent.js" defer></script> <!-- 引入鼠标坐标的 JavaScript 文件 -->
+	  <script src="lastModified.js" defer></script> <!-- 引入网页最后修改时间的 JavaScript 文件 -->
     <style>
       /* 类别选择器 */
       .tech-dept {
         background-color: #e0f7e9;
+		padding: 10px;
         margin-bottom: 20px;
       }
 
       .marketing-dept {
         background-color: #e3f2fd;
+		padding: 10px;
         margin-bottom: 20px;
       }
 
       .hr-dept {
         background-color: #ffe0b2;
+		padding: 10px;
         margin-bottom: 20px;
       }
-
+		
       /* 限制和不限制的 ID 选择器 */
       #special-employee {
         border: 2px solid #8e24aa;
@@ -37,12 +45,11 @@
         padding: 10px;
         border-bottom: 1px solid #e0e0e0;
       }
-      .hr-dept .employee-card{
-          height:44.67px;
-      }
+	  .hr-dept .employee-card{
+		  
+	  }
       /* 并集选择器 */
-      .marketing-dept,
-      .tech-dept {
+      .marketing-dept,.tech-dept {
         font-family: Arial, sans-serif;
         line-height: 1.5;
       }
@@ -80,11 +87,21 @@
       <div class="employee-card">赵六 - 市场总监 - 评分：4.4</div>
       <div class="employee-card high-rating">钱七 - 市场专员 - 评分：4.7</div>
     </div>
-
-    <div class="hr-dept">
-      <h2>人事部两个人</h2>
-      <div class="employee-card">周八 - 招聘专员 - 评分：4.5</div>
-      <div class="employee-card high-rating">吴九 - 人事经理 - 评分：4.6</div>
-    </div>
-  </body>
+	<div class="hr-dept">
+	      <h2>人事部两个人</h2>
+	      <div class="employee-card">周八 - 招聘专员 - 评分：4.5</div>
+	      <div class="employee-card high-rating">吴九 - 人事经理 - 评分：4.6</div>
+	    </div>
+	 <div id="clock" style="font-size: 2rem; margin-top: 20px;">时钟加载中...</div>
+	  
+	  <!-- 屏幕信息显示 -->
+	  <div id="screen-info" style="font-size: 1rem; margin-top: 20px;">屏幕信息加载中...</div>
+	  
+	  <!-- 鼠标按下坐标显示 -->
+	  <div id="mouse-coordinates" style="font-size: 1rem; margin-top: 20px;">鼠标坐标加载中...</div>
+	  
+	  <!-- 显示网页最后修改时间 -->
+	  <div id="last-modified" style="font-size: 1rem; margin-top: 20px;">网页最后修改时间加载中...</div>
+	  </body>
+	</html>
 </html>
